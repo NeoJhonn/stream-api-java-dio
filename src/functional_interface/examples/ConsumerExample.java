@@ -45,10 +45,7 @@ public class ConsumerExample {
         System.out.println();
 
         // Ou você pode passar direto o Consumer em formato de lambda
-        numeros.stream().forEach(n -> {
-            if (n % 2 != 0) {
-                System.out.print(n + ", ");
-            }
-        });
+        numeros.stream().filter(n -> n % 2 != 0)
+                .forEach(n -> System.out.print(n + ", "));
     }
 }
